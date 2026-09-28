@@ -12,57 +12,56 @@ import {
   Clock3,
   Phone,
   Menu,
-  X
+  X,
+  Laptop,
+  Building2
 } from "lucide-react";
 
 import "./styles.css";
 
-/*
-  IMPORTANT:
-  Replace this with DAVE's actual WhatsApp number before delivery.
-
-  Format:
-  Nigeria number without the + sign or spaces.
-
-  Example:
-  const WHATSAPP_NUMBER = "2348012345678";
-*/
-const WHATSAPP_NUMBER = "0814 908 0628";
-
+// Keep the working WhatsApp number.
+// Nigeria number without + sign or spaces.
+const WHATSAPP_NUMBER = "08149080628";
 
 const services = [
   {
     icon: TicketCheck,
     title: "WAEC, NECO & NABTEB",
-    text: "Registration services for WAEC, NECO and NABTEB candidates."
+    text: "Registration services and result-checking PIN support for WAEC, NECO and NABTEB candidates."
   },
   {
     icon: GraduationCap,
     title: "NYSC Registration",
-    text: "NYSC registration services through an accredited center."
+    text: "NYSC registration services through an NYSC accredited center."
   },
   {
     icon: ShieldCheck,
     title: "NERD Registration",
-    text: "NERD registration services through an accredited center."
+    text: "NERD registration services through a NERD accredited center."
   },
   {
     icon: TicketCheck,
     title: "Post UTME / Screening",
-    text: "Post UTME and screening registration support."
+    text: "Post UTME and screening registration support for students and candidates."
   },
   {
     icon: Phone,
     title: "Phones & Laptops",
-    text: "Sales of phones and laptops."
+    text: "Sales of phones and laptops for students, individuals and businesses."
   },
   {
-    icon: MapPin,
+    icon: Building2,
     title: "Properties",
-    text: "Buying and selling of new and used properties."
+    text: "Buying and selling of used and new properties."
   }
 ];
 
+const locations = [
+  "Km 3, Phase 3, Federal University, Oye Campus, Oye-Ekiti, Ekiti State",
+  "Adjacent Simple Eatery, Egbe, Oye-Ekiti",
+  "Opposite Transformer, Irare Heirs Hospital Street, Oye",
+  "26 Odunjo Avenue, Atobatele Estate, Onikoko, Abeokuta"
+];
 
 function whatsappUrl(message) {
   if (!WHATSAPP_NUMBER) {
@@ -71,7 +70,6 @@ function whatsappUrl(message) {
 
   return `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(message)}`;
 }
-
 
 function App() {
   const [menuOpen, setMenuOpen] = React.useState(false);
@@ -97,10 +95,11 @@ function App() {
 
             <span className="brand-text">
               <strong>DAVE</strong>
-              <small>DAVE COMPUTERS AND INTEGRATED SERVICES LIMITED</small>
+              <small>
+                DAVE COMPUTERS AND INTEGRATED SERVICES LIMITED
+              </small>
             </span>
           </a>
-
 
           <nav className={menuOpen ? "nav-links open" : "nav-links"}>
             <a href="#services" onClick={closeMenu}>
@@ -111,11 +110,14 @@ function App() {
               About
             </a>
 
+            <a href="#locations" onClick={closeMenu}>
+              Locations
+            </a>
+
             <a href="#contact" onClick={closeMenu}>
               Contact
             </a>
           </nav>
-
 
           <a
             className="nav-cta"
@@ -127,7 +129,6 @@ function App() {
             <span>Enquire</span>
           </a>
 
-
           <button
             className="menu-button"
             onClick={() => setMenuOpen(!menuOpen)}
@@ -138,7 +139,6 @@ function App() {
 
         </div>
       </header>
-
 
       <main id="top">
 
@@ -154,26 +154,26 @@ function App() {
 
               <div className="eyebrow">
                 <Sparkles size={15} />
-                Student-focused education services
+                Education • Technology • Property Services
               </div>
 
               <h1>
                 Your trusted point for{" "}
-                <span>exam services & result checking.</span>
+                <span>registration, technology & property services.</span>
               </h1>
 
               <p className="hero-text">
-  DAVE COMPUTERS AND INTEGRATED SERVICES LIMITED provides registration,
-  technology and property services for students, individuals and businesses.
-</p>
-
+                DAVE COMPUTERS AND INTEGRATED SERVICES LIMITED provides
+                registration support, technology sales and property services
+                for students, individuals and businesses.
+              </p>
 
               <div className="hero-actions">
 
                 <a
                   className="btn primary"
                   href={whatsappUrl(
-                    "Hello DAVE COMPUTERS AND INTEGRATED SERVICES LIMITED, I want to enquire about your WAEC, NECO or NABTEB services."
+                    "Hello DAVE COMPUTERS AND INTEGRATED SERVICES LIMITED, I would like to enquire about your services."
                   )}
                 >
                   Make an Enquiry
@@ -186,13 +186,7 @@ function App() {
 
               </div>
 
-
               <div className="trust-row">
-
-                <span>
-                  <CheckCircle2 size={17} />
-                  Convenient
-                </span>
 
                 <span>
                   <CheckCircle2 size={17} />
@@ -201,13 +195,17 @@ function App() {
 
                 <span>
                   <CheckCircle2 size={17} />
-                  Oye-based
+                  Multiple locations
+                </span>
+
+                <span>
+                  <CheckCircle2 size={17} />
+                  8AM – 8PM
                 </span>
 
               </div>
 
             </div>
-
 
             {/* HERO CARD */}
             <div className="hero-card">
@@ -217,7 +215,7 @@ function App() {
               <div className="hero-card-top">
 
                 <span className="mini-label">
-                  EDUCATIONAL SUPPORT
+                  INTEGRATED SERVICES
                 </span>
 
                 <div className="shield">
@@ -226,23 +224,21 @@ function App() {
 
               </div>
 
-
               <h2>
-                Get the exam services you need in one place.
+                Multiple essential services in one place.
               </h2>
 
               <p>
-                Registration support and result-checking PIN services
-                for major Nigerian examination bodies.
+                From student registration and screening support to phones,
+                laptops and property services.
               </p>
-
 
               <div className="exam-pills">
                 <span>WAEC</span>
-                <span>NECO</span>
-                <span>NABTEB</span>
+                <span>NYSC</span>
+                <span>NERD</span>
+                <span>TECH</span>
               </div>
-
 
               <a className="card-link" href="#contact">
                 Contact DAVE
@@ -254,31 +250,29 @@ function App() {
           </div>
         </section>
 
-
         {/* QUICK STATS */}
         <section className="stats">
 
           <div className="container stats-grid">
 
             <div className="stat">
-              <strong>3</strong>
-              <span>Major exam bodies</span>
+              <strong>6</strong>
+              <span>Core services</span>
             </div>
 
             <div className="stat">
-              <strong>1</strong>
-              <span>Convenient contact point</span>
+              <strong>4</strong>
+              <span>Listed locations</span>
             </div>
 
             <div className="stat">
-              <strong>24/7</strong>
-              <span>Enquiry access</span>
+              <strong>8AM–8PM</strong>
+              <span>Business hours</span>
             </div>
 
           </div>
 
         </section>
-
 
         {/* SERVICES */}
         <section className="section" id="services">
@@ -292,72 +286,64 @@ function App() {
               </div>
 
               <h2>
-                Exam services made simple.
+                Services designed around your needs.
               </h2>
 
               <p>
-                Choose the examination body you need help with and
-                contact DAVE for current registration and PIN availability.
+                Explore DAVE's registration, technology and property services,
+                then contact the team for current availability and requirements.
               </p>
 
             </div>
 
-
             <div className="service-grid">
 
-              {services.map(
-                ({ icon: Icon, title, text }) => (
+              {services.map(({ icon: Icon, title, text }, index) => (
 
-                  <article
-                    className="service-card"
-                    key={title}
-                  >
+                <article
+                  className="service-card"
+                  key={title}
+                >
 
-                    <div className="service-card-top">
+                  <div className="service-card-top">
 
-                      <div className="icon-box">
-                        <Icon size={24} />
-                      </div>
-
-                      <span className="service-number">
-                        0{services.findIndex(
-                          service => service.title === title
-                        ) + 1}
-                      </span>
-
+                    <div className="icon-box">
+                      <Icon size={24} />
                     </div>
 
-
-                    <span className="service-kicker">
-                      EXAMINATION SERVICE
+                    <span className="service-number">
+                      {String(index + 1).padStart(2, "0")}
                     </span>
 
-                    <h3>{title}</h3>
+                  </div>
 
-                    <p>{text}</p>
+                  <span className="service-kicker">
+                    DAVE SERVICE
+                  </span>
 
+                  <h3>{title}</h3>
 
-                    <a
-                      href={whatsappUrl(
-                        `DAVE COMPUTERS AND INTEGRATED SERVICES LIMITED, I am interested in ${title} services.`
-                      )}
-                      className="service-link"
-                    >
-                      Enquire
-                      <ArrowRight size={16} />
-                    </a>
+                  <p>{text}</p>
 
-                  </article>
+                  <a
+                    href={whatsappUrl(
+                      `Hello DAVE COMPUTERS AND INTEGRATED SERVICES LIMITED, I am interested in your ${title} service.`
+                    )}
+                    className="service-link"
+                  >
+                    Enquire
+                    <ArrowRight size={16} />
+                  </a>
 
-                )
-              )}
+                </article>
+
+              ))}
 
             </div>
 
           </div>
 
         </section>
-
 
         {/* ABOUT */}
         <section className="section about" id="about">
@@ -375,21 +361,20 @@ function App() {
               </div>
 
               <span className="about-label">
-                EDUCATIONAL SUPPORT
+                DAVE COMPUTERS
               </span>
 
               <h3>
-                Built around students.
+                More than just computer services.
               </h3>
 
               <p>
-                DAVE COMPUTERS AND INTEGRATED SERVICES LIMITED is presented as
-                a straightforward place for students and candidates
-                to get help with examination-related services.
+                DAVE COMPUTERS AND INTEGRATED SERVICES LIMITED combines
+                educational registration support, technology sales and
+                property services under one business.
               </p>
 
             </div>
-
 
             <div className="about-content">
 
@@ -398,62 +383,51 @@ function App() {
               </div>
 
               <h2>
-                A simple way to get the right exam service.
+                One business. Multiple essential services.
               </h2>
-
 
               <div className="feature-list">
 
                 <div className="feature">
-
                   <CheckCircle2 />
 
                   <span>
                     <strong>
-                      Clear service options
+                      Education & registration
                     </strong>
 
                     <small>
-                      See the examination body you need at a glance.
+                      WAEC, NECO, NABTEB, NYSC, NERD and Post UTME services.
                     </small>
                   </span>
-
                 </div>
 
-
                 <div className="feature">
-
                   <CheckCircle2 />
 
                   <span>
                     <strong>
-                      Easy enquiries
+                      Technology sales
                     </strong>
 
                     <small>
-                      Contact the business directly for availability
-                      and current requirements.
+                      Phones and laptops available through DAVE's sales service.
                     </small>
                   </span>
-
                 </div>
 
-
                 <div className="feature">
-
                   <CheckCircle2 />
 
                   <span>
                     <strong>
-                      Convenient local service
+                      Property services
                     </strong>
 
                     <small>
-                      Serving students and candidates around the
-                      Oye/FUOYE area.
+                      Buying and selling of used and new properties.
                     </small>
                   </span>
-
                 </div>
 
               </div>
@@ -464,29 +438,27 @@ function App() {
 
         </section>
 
-
-        {/* CONTACT INFORMATION */}
-        <section className="contact-info">
+        {/* LOCATIONS */}
+        <section className="contact-info" id="locations">
 
           <div className="container">
 
             <div className="contact-heading">
 
               <div className="eyebrow">
-                Contact & Location
+                Contact & Locations
               </div>
 
               <h2>
-                Need help with an exam service?
+                Find DAVE at any of the listed locations.
               </h2>
 
               <p>
-                Reach out to DAVE COMPUTERS AND INTEGRATED SERVICES LIMITED
-                for current service availability and requirements.
+                DAVE COMPUTERS AND INTEGRATED SERVICES LIMITED currently
+                operates across the following listed locations.
               </p>
 
             </div>
-
 
             <div className="contact-grid">
 
@@ -497,17 +469,71 @@ function App() {
                 </div>
 
                 <div>
-                  <span>LOCATION</span>
+                  <span>LOCATION 01</span>
                   <strong>
-                    Oye / FUOYE Area
+                    Oye / FUOYE
                   </strong>
                   <p>
-                    Ekiti State, Nigeria
+                    Km 3, Phase 3, Federal University, Oye Campus,
+                    Oye-Ekiti, Ekiti State
                   </p>
                 </div>
 
               </div>
 
+              <div className="contact-card">
+
+                <div className="contact-icon">
+                  <MapPin size={23} />
+                </div>
+
+                <div>
+                  <span>LOCATION 02</span>
+                  <strong>
+                    Egbe, Oye-Ekiti
+                  </strong>
+                  <p>
+                    Adjacent Simple Eatery, Egbe, Oye-Ekiti
+                  </p>
+                </div>
+
+              </div>
+
+              <div className="contact-card">
+
+                <div className="contact-icon">
+                  <MapPin size={23} />
+                </div>
+
+                <div>
+                  <span>LOCATION 03</span>
+                  <strong>
+                    Irare, Oye
+                  </strong>
+                  <p>
+                    Opposite Transformer, Irare Heirs Hospital Street, Oye
+                  </p>
+                </div>
+
+              </div>
+
+              <div className="contact-card">
+
+                <div className="contact-icon">
+                  <MapPin size={23} />
+                </div>
+
+                <div>
+                  <span>LOCATION 04</span>
+                  <strong>
+                    Abeokuta
+                  </strong>
+                  <p>
+                    26 Odunjo Avenue, Atobatele Estate, Onikoko, Abeokuta
+                  </p>
+                </div>
+
+              </div>
 
               <div className="contact-card">
 
@@ -516,17 +542,16 @@ function App() {
                 </div>
 
                 <div>
-                  <span>ENQUIRIES</span>
+                  <span>OPENING HOURS</span>
                   <strong>
-                    Contact for availability
+                    8:00 AM – 8:00 PM
                   </strong>
                   <p>
-                    Ask about current registration and PIN services.
+                    Contact DAVE for current availability and requirements.
                   </p>
                 </div>
 
               </div>
-
 
               <div className="contact-card">
 
@@ -535,12 +560,12 @@ function App() {
                 </div>
 
                 <div>
-                  <span>CONTACT</span>
+                  <span>PHONE</span>
                   <strong>
-                    Direct enquiries
+                    0705 099 7976
                   </strong>
                   <p>
-                    Contact DAVE for assistance.
+                    Alternative: 0814 908 0628
                   </p>
                 </div>
 
@@ -551,7 +576,6 @@ function App() {
           </div>
 
         </section>
-
 
         {/* CTA */}
         <section className="cta" id="contact">
@@ -563,7 +587,7 @@ function App() {
               <div className="cta-copy">
 
                 <div className="eyebrow light">
-                  Need an exam service?
+                  Need a service?
                 </div>
 
                 <h2>
@@ -571,17 +595,16 @@ function App() {
                 </h2>
 
                 <p>
-                  Ask about WAEC, NECO or NABTEB registration
-                  and result-checking PIN services.
+                  Ask about registration services, phones, laptops,
+                  properties or any of the available services.
                 </p>
 
               </div>
 
-
               <a
                 className="btn white"
                 href={whatsappUrl(
-                  "Hello DAVE COMPUTERS AND INTEGRATED SERVICES LIMITED, I would like to make an enquiry about your exam services."
+                  "Hello DAVE COMPUTERS AND INTEGRATED SERVICES LIMITED, I would like to make an enquiry about your services."
                 )}
               >
                 <MessageCircle size={19} />
@@ -595,7 +618,6 @@ function App() {
         </section>
 
       </main>
-
 
       {/* FOOTER */}
       <footer>
@@ -614,12 +636,11 @@ function App() {
               </strong>
 
               <span>
-                Educational support services in Oye, Ekiti.
+                Education, technology and property services.
               </span>
             </div>
 
           </div>
-
 
           <span className="copyright">
             © {new Date().getFullYear()} DAVE Computers
@@ -632,7 +653,6 @@ function App() {
     </div>
   );
 }
-
 
 createRoot(
   document.getElementById("root")
