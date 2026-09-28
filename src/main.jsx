@@ -33,18 +33,33 @@ const WHATSAPP_NUMBER = "0814 908 0628";
 const services = [
   {
     icon: TicketCheck,
-    title: "WAEC",
-    text: "Registration support and result-checking PIN services."
+    title: "WAEC, NECO & NABTEB",
+    text: "Registration services for WAEC, NECO and NABTEB candidates."
+  },
+  {
+    icon: GraduationCap,
+    title: "NYSC Registration",
+    text: "NYSC registration services through an accredited center."
+  },
+  {
+    icon: ShieldCheck,
+    title: "NERD Registration",
+    text: "NERD registration services through an accredited center."
   },
   {
     icon: TicketCheck,
-    title: "NECO",
-    text: "Registration support and result-checking PIN services."
+    title: "Post UTME / Screening",
+    text: "Post UTME and screening registration support."
   },
   {
-    icon: TicketCheck,
-    title: "NABTEB",
-    text: "Registration support and result-checking PIN services."
+    icon: Phone,
+    title: "Phones & Laptops",
+    text: "Sales of phones and laptops."
+  },
+  {
+    icon: MapPin,
+    title: "Properties",
+    text: "Buying and selling of new and used properties."
   }
 ];
 
