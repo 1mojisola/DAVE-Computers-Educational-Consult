@@ -20,7 +20,7 @@ import "./styles.css";
 
 const WHATSAPP_NUMBER = "08149080628";
 
-const LOGO = "/received_1035405392878422.jpeg";
+const LOGO = "https://raw.githubusercontent.com/1mojisola/DAVE-Computers-Educational-Consult/refs/heads/main/received_1035405392878422.jpeg";
 
 const services = [
   {
