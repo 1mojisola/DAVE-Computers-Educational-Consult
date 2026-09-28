@@ -163,10 +163,9 @@ function App() {
               </h1>
 
               <p className="hero-text">
-                DAVE COMPUTERS AND INTEGRATED SERVICES LIMITED provides support for
-                WAEC, NECO and NABTEB registration and result-checking PIN
-                services.
-              </p>
+  DAVE COMPUTERS AND INTEGRATED SERVICES LIMITED provides registration,
+  technology and property services for students, individuals and businesses.
+</p>
 
 
               <div className="hero-actions">
