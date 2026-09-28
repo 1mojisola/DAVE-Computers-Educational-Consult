@@ -629,9 +629,12 @@ function App() {
 
           <div className="footer-brand">
 
-            <div className="footer-logo">
-              <GraduationCap size={19} />
-            </div>
+            <div className="footer-logo logo-mark">
+  <img
+    src="/received_1035405392878422.jpeg"
+    alt="DAVE Computers and Integrated Services Limited logo"
+  />
+</div>
 
             <div>
               <strong>
