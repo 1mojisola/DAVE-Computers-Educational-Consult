@@ -89,9 +89,12 @@ function App() {
             onClick={closeMenu}
             aria-label="DAVE Computers home"
           >
-            <span className="brand-mark">
-              <GraduationCap size={22} />
-            </span>
+           <span className="brand-mark logo-mark">
+  <img
+    src="/received_1035405392878422.jpeg"
+    alt="DAVE Computers and Integrated Services Limited logo"
+  />
+</span>
 
             <span className="brand-text">
               <strong>DAVE</strong>
