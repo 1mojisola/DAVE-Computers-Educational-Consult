@@ -13,15 +13,14 @@ import {
   Phone,
   Menu,
   X,
-  Laptop,
   Building2
 } from "lucide-react";
 
 import "./styles.css";
 
-// Keep the working WhatsApp number.
-// Nigeria number without + sign or spaces.
 const WHATSAPP_NUMBER = "08149080628";
+
+const LOGO = "/received_1035405392878422.jpeg";
 
 const services = [
   {
@@ -71,6 +70,16 @@ function whatsappUrl(message) {
   return `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(message)}`;
 }
 
+function Logo({ className = "" }) {
+  return (
+    <img
+      className={className}
+      src={LOGO}
+      alt="DAVE Computers and Integrated Services Limited logo"
+    />
+  );
+}
+
 function App() {
   const [menuOpen, setMenuOpen] = React.useState(false);
 
@@ -89,12 +98,9 @@ function App() {
             onClick={closeMenu}
             aria-label="DAVE Computers home"
           >
-           <span className="brand-mark logo-mark">
-  <img
-    src="/received_1035405392878422.jpeg"
-    alt="DAVE Computers and Integrated Services Limited logo"
-  />
-</span>
+            <span className="brand-mark logo-mark">
+              <Logo />
+            </span>
 
             <span className="brand-text">
               <strong>DAVE</strong>
@@ -162,7 +168,9 @@ function App() {
 
               <h1>
                 Your trusted point for{" "}
-                <span>registration, technology & property services.</span>
+                <span>
+                  registration, technology & property services.
+                </span>
               </h1>
 
               <p className="hero-text">
@@ -630,11 +638,8 @@ function App() {
           <div className="footer-brand">
 
             <div className="footer-logo logo-mark">
-  <img
-    src="/received_1035405392878422.jpeg"
-    alt="DAVE Computers and Integrated Services Limited logo"
-  />
-</div>
+              <Logo />
+            </div>
 
             <div>
               <strong>
