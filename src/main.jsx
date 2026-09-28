@@ -27,7 +27,7 @@ import "./styles.css";
   Example:
   const WHATSAPP_NUMBER = "2348012345678";
 */
-const WHATSAPP_NUMBER = "";
+const WHATSAPP_NUMBER = "0814 908 0628";
 
 
 const services = [
