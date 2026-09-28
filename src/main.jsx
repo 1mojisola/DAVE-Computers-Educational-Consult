@@ -82,7 +82,7 @@ function App() {
 
             <span className="brand-text">
               <strong>DAVE</strong>
-              <small>Computers & Educational Consult</small>
+              <small>DAVE COMPUTERS AND INTEGRATED SERVICES LIMITED</small>
             </span>
           </a>
 
@@ -105,7 +105,7 @@ function App() {
           <a
             className="nav-cta"
             href={whatsappUrl(
-              "Hello DAVE Computers, I would like to make an enquiry about your services."
+              "Hello DAVE COMPUTERS AND INTEGRATED SERVICES LIMITED, I would like to make an enquiry about your services."
             )}
           >
             <MessageCircle size={17} />
@@ -148,7 +148,7 @@ function App() {
               </h1>
 
               <p className="hero-text">
-                DAVE Computers & Educational Consult provides support for
+                DAVE COMPUTERS AND INTEGRATED SERVICES LIMITED provides support for
                 WAEC, NECO and NABTEB registration and result-checking PIN
                 services.
               </p>
@@ -159,7 +159,7 @@ function App() {
                 <a
                   className="btn primary"
                   href={whatsappUrl(
-                    "Hello DAVE Computers, I want to enquire about your WAEC, NECO or NABTEB services."
+                    "Hello DAVE COMPUTERS AND INTEGRATED SERVICES LIMITED, I want to enquire about your WAEC, NECO or NABTEB services."
                   )}
                 >
                   Make an Enquiry
@@ -325,7 +325,7 @@ function App() {
 
                     <a
                       href={whatsappUrl(
-                        `Hello DAVE Computers, I am interested in ${title} services.`
+                        `DAVE COMPUTERS AND INTEGRATED SERVICES LIMITED, I am interested in ${title} services.`
                       )}
                       className="service-link"
                     >
@@ -369,7 +369,7 @@ function App() {
               </h3>
 
               <p>
-                DAVE Computers & Educational Consult is presented as
+                DAVE COMPUTERS AND INTEGRATED SERVICES LIMITED is presented as
                 a straightforward place for students and candidates
                 to get help with examination-related services.
               </p>
@@ -467,7 +467,7 @@ function App() {
               </h2>
 
               <p>
-                Reach out to DAVE Computers & Educational Consult
+                Reach out to DAVE COMPUTERS AND INTEGRATED SERVICES LIMITED
                 for current service availability and requirements.
               </p>
 
@@ -553,7 +553,7 @@ function App() {
                 </div>
 
                 <h2>
-                  Talk to DAVE Computers.
+                  Talk to DAVE COMPUTERS AND INTEGRATED SERVICES LIMITED.
                 </h2>
 
                 <p>
@@ -567,7 +567,7 @@ function App() {
               <a
                 className="btn white"
                 href={whatsappUrl(
-                  "Hello DAVE Computers, I would like to make an enquiry about your exam services."
+                  "Hello DAVE COMPUTERS AND INTEGRATED SERVICES LIMITED, I would like to make an enquiry about your exam services."
                 )}
               >
                 <MessageCircle size={19} />
@@ -596,7 +596,7 @@ function App() {
 
             <div>
               <strong>
-                DAVE Computers & Educational Consult
+                DAVE COMPUTERS AND INTEGRATED SERVICES LIMITED
               </strong>
 
               <span>
